@@ -112,3 +112,7 @@ func (api *APIClient) logPrintf(format string, v ...interface{}) {
 		api.Logger.Printf(format, v...)
 	}
 }
+
+func (api *APIClient) SetHttpClient(httpClient HTTPClient) {
+	api.httpClient = httpClient
+}

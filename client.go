@@ -113,6 +113,11 @@ func (client *Client) Do(request Request) (response *Response, err *Error) {
 	return client.apiClient.Do(request)
 }
 
+// SetHttpClient sets custom HTTPClient
+func (client *Client) SetHttpClient(httpClient HTTPClient) {
+	client.apiClient.SetHttpClient(httpClient)
+}
+
 // Destination describes the final destination.
 type Destination struct {
 	UserID      int64    `json:"user_id"`
